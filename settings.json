@@ -1,6 +1,6 @@
 {
     // 编辑器打开时 自动上传配置文件
-    "sync.autoUpload": false,
+    // "sync.autoUpload": false,
     // 自动调整换行适应显示的列宽
     "editor.wordWrap": "on",
     "files.associations": {
@@ -8,26 +8,26 @@
         "*.cjson": "jsonc",
         "*.wxss": "css",
         "*.wxs": "javascript",
-        "*.js": "javascript"
+        "*.js": "javascript",
+        "*.vue": "vue",
+        "*.html": "html",
+        "*.sh": "shellscript"
     },
     // 鼠标缩放
     "editor.mouseWheelZoom": true,
     "editor.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
     "editor.cursorSmoothCaretAnimation": true,
-    "window.smoothScrollingWorkaround": true,
-    // "window.titleBarStyle": "native",
-    // 默认shell
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    // "window.smoothScrollingWorkaround": true,
     // sync同步使用 自动忽略
-    "vscode_vibrancy.opacity": 0.5,
-    "vscode_vibrancy.theme": "Default Dark",
+    // "vscode_vibrancy.opacity": 0.5,
+    // "vscode_vibrancy.theme": "Default Dark",
     "alias-skip.mappings": {
         "@": "/src" // 默认只有`@`映射，映射到`/src`，你可以添加更多映射，映射路径必须以`/`开头
         ,"./": "/src"
     },
     // eslint主动保存的时候校验并修复
-    "eslint.format.enable": true,
+    // "eslint.format.enable": true,
     // "editor.codeActionsOnSave": {
     //     // "source.fixAll": true,  //会使得灰色语句消失
     //     "source.fixAll.eslint": true,
@@ -42,31 +42,31 @@
     //         "autoFix": true
     //     }
     // ],
-    "eslint.validate": [
-        "javascript",
-        // "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "html",
-        // "vue",
-        // "markdown"
-    ],
-    "eslint.options": {
-        "plugin": [
-            "html"
-        ]
-    },
+    // "eslint.validate": [
+    //     "javascript",
+    //     // "javascriptreact",
+    //     "typescript",
+    //     "typescriptreact",
+    //     "html",
+    //     // "vue",
+    //     // "markdown"
+    // ],
+    // "eslint.options": {
+    //     "plugin": [
+    //         "html"
+    //     ]
+    // },
     "[markdown]": {
         // "editor.wordWrap": "on",
         "editor.quickSuggestions": false,
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         // "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    // #去掉代码结尾的分号 不能开 会对js末尾分号影响
-    "prettier.semi": false,
-    // #使用带引号替代双引号
-    "prettier.singleQuote": true,
-    "prettier.trailingComma": "none",
+    // // #去掉代码结尾的分号 不能开 会对js末尾分号影响
+    // "prettier.semi": false,
+    // // #使用带引号替代双引号
+    // "prettier.singleQuote": true,
+    // "prettier.trailingComma": "none",
     // "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
     "vetur.format.defaultFormatterOptions": {
         "wrap_attributes": "force-expand-multiline",
@@ -108,18 +108,25 @@
     },
     // prettier不能格式化html
     "vetur.format.defaultFormatter.html": "js-beautify-html",
+
+    // plugin Vue 3 Support - All In One 格式化配置---- 格式化 需要的配置--
+    // 参数一个的时候 不需要括号
+    "vue3snippets.arrowParens":"avoid",
+    "vue3snippets.semi":false,
+    "vue3snippets.singleQuote":true,
+    "vue3snippets.vueIndentScriptAndStyle":true, // 语法标签内 起步 空格
+    "vue3snippets.trailingComma":"none", // 逗号尾随
+    // -----------------------------------------------------
     // 默认语法格式化
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[vue]": {
-        "editor.defaultFormatter": "octref.vetur"
+        "editor.defaultFormatter": "Wscats.vue"
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    // 主题icon
-    "workbench.iconTheme": "material-icon-theme",
     "editor.quickSuggestions": {
         "strings": true
     },
@@ -132,10 +139,6 @@
     "workbench.tree.indent": 7,
     // 显示文件卡片的地址栏
     "workbench.editor.labelFormat": "short",
-    // 全屏退出 回复仍然全屏
-    "window.restoreFullscreen": false,
-    // 控制断点是否显示在标尺中
-    "debug.showBreakpointsInOverviewRuler": true,
     // 对于粘贴的内容是否自动格式化
     "editor.formatOnPaste": true,
     // 在导航中是否显示文件的路径
@@ -149,10 +152,10 @@
     },
     // 设置相关文件配置的启动,下次自动启动
     "minapp-vscode.disableAutoConfig": true,
-    "vueDocs.lang": "zh",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    // "vueDocs.lang": "zh",
+    // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.formatOnType": true,
-    "eslint.alwaysShowStatus": false,
+    // "eslint.alwaysShowStatus": false,
     "git.confirmSync": false,
     // 拓展回车是否能够选中带选项,默认是tab
     "editor.acceptSuggestionOnEnter": "off",
@@ -167,37 +170,29 @@
     "liveServer.settings.donotShowInfoMsg": true,
     "git.autofetch": true,
     "settingsSync.ignoredSettings": [],
-    "sync.quietSync": true,
-    "gitlens.defaultDateFormat": null,
-    "gitlens.statusBar.alignment": "left",
-    "gitlens.views.repositories.enabled": true,
-    "terminal.integrated.rendererType": "dom",
-    // css
-    "html-css-class-completion.enableEmmetSupport": true,
+    // "sync.quietSync": true,
+    // "gitlens.defaultDateFormat": null,
+    // "gitlens.statusBar.alignment": "left",
+    // "gitlens.views.repositories.enabled": true,
+    // "terminal.integrated.rendererType": "dom",
+    // // css
+    // "html-css-class-completion.enableEmmetSupport": true,
     "css.completion.completePropertyWithSemicolon": false,
     "css.lint.ieHack": "error",
     "css.lint.important": "warning",
     "css.lint.propertyIgnoredDueToDisplay": "error",
     "css.lint.unknownProperties": "error",
     "css.lint.zeroUnits": "warning",
-    "css.enabledLanguages": [
-        "html"
-    ],
-    "css.validation": {},
-    "workbench.editorAssociations": [
-        {
-            "viewType": "cweijan.officeViewer",
-            "filenamePattern": "*.jpg"
-        },
-        {
-            "viewType": "imagePreview.previewEditor",
-            "filenamePattern": "*.png"
-        },
-        {
-            "viewType": "default",
-            "filenamePattern": "*.md"
-        }
-    ],
+    // "css.enabledLanguages": [
+    //     "html"
+    // ],
+    // "css.validation": {},
+    "workbench.editorAssociations": {
+        "*.jpg": "cweijan.officeViewer",
+        "*.png": "cweijan.officeViewer",
+        "*.md": "default",
+        "*.svg": "default"
+    },
     // 右下角的小宠物
     "background.customImages": [
         "https://user-images.githubusercontent.com/18376480/55394572-30827700-5572-11e9-9435-2cc501eb53bb.png"
@@ -220,8 +215,8 @@
     "editor.cursorBlinking": "phase",
     "editor.cursorWidth": 50,
     "editor.cursorStyle": "block",
-    "glassit.alpha": 255,
-    "jsannotations.enabled": true,
+    // "glassit.alpha": 255,
+    // "jsannotations.enabled": true,
     "window.menuBarVisibility": "compact",
     "window.titleSeparator": "",
     "workbench.preferredHighContrastColorTheme": "IOLOII Dark",
@@ -230,20 +225,19 @@
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.limit.perEditorGroup": true,
     "auto-rename-tag.activationOnLanguage": [
-        "html",
-        "ejs",
-        "vue",
-        "md",
         "js",
+        "html",
+        "md",
+        "vue",
     ],
-    "bracketPairColorizer.highlightActiveScope": true,
-    "bracketPairColorizer.showBracketsInGutter": true,
-    "bracketPairColorizer.scopeLineCSS": [
-        "borderStyle : dashed",
-        "borderWidth : 2px",
-        "borderColor : {color}; opacity: 0.8"
-    ],
-    "highlight-matching-tag.highlightSelfClosing": true,
+    // "bracketPairColorizer.highlightActiveScope": true,
+    // "bracketPairColorizer.showBracketsInGutter": true,
+    // "bracketPairColorizer.scopeLineCSS": [
+    //     "borderStyle : dashed",
+    //     "borderWidth : 2px",
+    //     "borderColor : {color}; opacity: 0.8"
+    // ],
+    // "highlight-matching-tag.highlightSelfClosing": true,
     // 定义要搜索的文件的Glob模式。只包含您需要的文件，不要使用`{**/*.*}`来实现永久性和避免二进制文件。
     "todohighlight.include": [
         "**/*.js",
@@ -346,22 +340,22 @@
         }
     ],
     "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "sync.forceDownload": true,
-    "cSpell.enableFiletypes": [
-        "log",
-        "vue"
-    ],
-    "cSpell.userWords": [
-        "IOLOII",
-        "endregion",
-        "opendir",
-        "typeof",
-        "yuey"
-    ],
+    // "sync.forceDownload": true,
+    // "cSpell.enableFiletypes": [
+    //     "log",
+    //     "vue"
+    // ],
+    // "cSpell.userWords": [
+    //     "IOLOII",
+    //     "endregion",
+    //     "opendir",
+    //     "typeof",
+    //     "yuey"
+    // ],
     "explorer.confirmDelete": false,
-    "window.title": "👉🌸${rootName}👈🌠",
+    "window.title": "🌸👉${rootName}👈🌠🌠🌠🌠🌠🌠🌠",
     "rest-client.previewOption": "body",
     "rest-client.defaultHeaders": {
         // "User-Agent": "vscode-restclient",
@@ -371,41 +365,37 @@
     "rest-client.previewResponsePanelTakeFocus": false,
     "workbench.startupEditor": "newUntitledFile",
     "extensions.autoUpdate": false,
-    "workbench.editor.wrapTabs": true,
     "workbench.editor.decorations.colors": true,
     "workbench.editor.decorations.badges": true,
-    "search.experimental.searchInOpenEditors": true,
+    // "search.experimental.searchInOpenEditors": true,
     "editor.accessibilitySupport": "off",
     "todohighlight.isEnable": true,
     "code-runner.defaultLanguage": "javascript",
     "update.mode": "start",
-    "sync.autoDownload": true,
-    "workbench.productIconTheme": "material-product-icons",
+    // "sync.autoDownload": true,
+    "workbench.productIconTheme": "fluent-icons",
     "editor.fontFamily": "'cascadia code'",
-    "sync.gist": "9246febf610d8e0d697bfb559bf918dc",
-    "gitlens.advanced.messages": {
-        "suppressImproperWorkspaceCasingWarning": true
-    },
+    // "sync.gist": "9246febf610d8e0d697bfb559bf918dc",
+    // "gitlens.advanced.messages": {
+    //     "suppressImproperWorkspaceCasingWarning": true
+    // },
     "git.alwaysShowStagedChangesResourceGroup": true,
     "git.suggestSmartCommit": false,
-    "sync.syncExtensions": true,
-    "sync.removeExtensions": true,
-    "vscode_vibrancy.imports": [
-        "$theme-style$"
-    ],
-    "editor.inlineHints.fontFamily": "'cascadia code',Consolas, 'Courier New', monospace",
+    // "sync.syncExtensions": true,
+    // "sync.removeExtensions": true,
+    // "vscode_vibrancy.imports": [
+    //     "$theme-style$"
+    // ],
+    // "editor.inlineHints.fontFamily": "'cascadia code',Consolas, 'Courier New', monospace",
     "debug.console.fontFamily": "'cascadia code'",
     "editor.minimap.side": "left",
     "editor.suggest.insertMode": "replace",
     "editor.suggest.localityBonus": true,
-    "editor.suggest.showStatusBar": true,
     "editor.wordBasedSuggestionsMode": "currentDocument",
     "files.autoGuessEncoding": true,
     "files.autoSaveDelay": 0,
     "files.defaultLanguage": "javascript",
-    "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-    "workbench.list.horizontalScrolling": true,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.maxColumn": 300,
     // "vscode_custom_css.imports": [
@@ -422,21 +412,21 @@
     "C_Cpp.vcFormat.indent.caseLabels": true,
     "markdown.extension.list.indentationSize": "inherit",
     "editor.autoIndent": "advanced",
-    "vscode_vibrancy.type": "acrylic",
+    // "vscode_vibrancy.type": "acrylic",
     "search.followSymlinks": false,
-    "polacode.transparentBackground": true,
-    "polacode.target": "snippet",
+    // "polacode.transparentBackground": true,
+    // "polacode.target": "snippet",
     "codesnap.backgroundColor": "#ffffff",
     "codesnap.transparentBackground": true,
     "codesnap.containerPadding": "2rem",
     "vscode-office.viewAbsoluteLocal": true,
-    "eslint.probe": [
-        "javascript",
-        "typescript",
-        "html",
-        "vue"
-    ],
-    "eslint.quiet": true,
+    // "eslint.probe": [
+    //     "javascript",
+    //     "typescript",
+    //     "html",
+    //     "vue"
+    // ],
+    // "eslint.quiet": true,
     "editor.suggestSelection": "first",
     "git-graph.commitDetailsView.location": "Docked to Bottom",
     "git-graph.customEmojiShortcodeMappings": [],
@@ -448,16 +438,16 @@
     ],
     "git-graph.repository.commits.fetchAvatars": true,
     "git-graph.date.type": "Commit Date",
+    "git-graph.date.format":"ISO Date & Time",
     // "prettier.embeddedLanguageFormatting": "off",
     // "vetur.format.defaultFormatter.ts": "none",
     "markdown.preview.breaks": true,
     "markdown.preview.fontFamily": "'cascadia code',-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
     "markdown.extension.preview.autoShowPreviewToSide": false,
     "markdown.extension.print.theme": "dark",
-    "powermode.enabled": true, //启动效果
-    "powermode.enableShake": false,
-    "terminal.integrated.useWslProfiles": false,
-    "debug.node.showUseWslIsDeprecatedWarning": false,
+    // "powermode.enabled": true, //启动效果
+    // "powermode.enableShake": false,
+    // "debug.node.showUseWslIsDeprecatedWarning": false,
     "vetur.grammar.customBlocks": {
         "docs": "md",
         "i18n": "json"
@@ -465,7 +455,7 @@
     "css.lint.argumentsInColorFunction": "warning",
     "css.lint.boxModel": "warning",
     "css.lint.float": "warning",
-    "sync.forceUpload": false,
+    // "sync.forceUpload": false,
     "settingsSync.ignoredExtensions": [],
     "editor.linkedEditing": true,
     "vetur.validation.style": false,
@@ -474,31 +464,92 @@
     "typescript.format.semicolons": "remove",
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.quoteStyle": "single",
-    "turboConsoleLog.quote": "'",
+    // "turboConsoleLog.quote": "'",
     "vetur.validation.template": false,
     "editor.defaultFormatter": "octref.vetur",
-    "html.format.enable": false,
-    "[nginx]": {
-        "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
-    },
-    "prettier.arrowParens": "avoid",
+    "html.format.enable": true,
+    // "[nginx]": {
+    //     "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+    // },
+    // "prettier.arrowParens": "avoid",
     "diffEditor.ignoreTrimWhitespace": false,
-    "backgroundCover.imagePath": "d:\\program\\workspace\\Other\\netlify-web-app\\img\\pikapika.png",
-    "backgroundCover.randomImageFolder": "d:\\program\\workspace\\Other\\netlify-web-app\\img",
+    // "backgroundCover.imagePath": "d:\\program\\workspace\\Other\\netlify-web-app\\img\\pikapika.png",
+    // "backgroundCover.randomImageFolder": "d:\\program\\workspace\\Other\\netlify-web-app\\img",
     "npm.autoDetect": "off",
     "vscode-office.autoTheme": true,
     "codesnap.shutterAction": "copy",
     "workbench.editor.enablePreview": false,
     "[scss]": {
         "editor.suggest.insertMode": "replace",
-        "gitlens.codeLens.scopes": [
-            "document"
-        ]
+        // "gitlens.codeLens.scopes": [
+        //     "document"
+        // ],
+        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
     },
-    "diffEditor.renderSideBySide": false,
-    "terminal.integrated.gpuAcceleration": "no",
+    "terminal.integrated.gpuAcceleration": "on",
     "terminal.integrated.tabs.enabled": true,
     "author-generator.author": "IOLOII",
     "author-generator.github": "https://github.com/IOLOII",
     "author-generator.updateOnSave": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontLigatures": true,
+    "vetur.ignoreProjectWarning": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.enableBell": true,
+    "terminal.integrated.profiles.windows": {
+        "C:\\Program Files\\Git\\bin\\bash.exe (migrated)": {
+            "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "args": []
+        }
+    },
+    "terminal.integrated.cursorBlinking": true,
+    // "vscode_vibrancy.opacity": 1,
+    "workbench.editor.limit.value": 5,
+    "workbench.list.openMode": "doubleClick",
+    "workbench.tree.renderIndentGuides": "always",
+    "window.restoreWindows": "one",
+    "editor.suggest.showStatusBar": true,
+    "files.trimFinalNewlines": true,
+    "files.simpleDialog.enable": true,
+    "workbench.enableExperiments": false,
+    "window.customMenuBarAltFocus": false,
+    "window.dialogStyle": "custom",
+    "search.maxResults": 200,
+    "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
+    "search.searchOnType": false,
+    "extensions.closeExtensionDetailsOnViewChange": true,
+    "diffEditor.wordWrap": "off",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    // "svg.preview.transparencyGrid": true,
+    // "svg.preview.boundingBox": true,
+    "remote.SSH.remotePlatform": {
+        "81.71.130.254": "linux",
+        "red-hummingbird-oct3groa": "linux"
+    },
+    "files.exclude": {
+        "**/.git": false,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "git.ignoreLegacyWarning": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "git.fetchOnPull": true,
+    "terminal.integrated.useWslProfiles": false,
+    "terminal.explorerKind": "external",
+    "varTranslation.translationEngine": "google",
+    "remote.SSH.defaultExtensions": [
+        "gitpod.gitpod-remote-ssh"
+    ],
+    "remote.SSH.configFile": "C:\\Users\\yuey\\AppData\\Local\\Temp\\gitpod_ssh_config-19644-bvizgq0ELEv1",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.fontSize": 15,
+    "workbench.editor.autoLockGroups": {
+        "terminalEditor": false
+    },
+    "editor.definitionLinkOpensInPeek": true,
 }

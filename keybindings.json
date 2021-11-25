@@ -50,5 +50,46 @@
     "key": "ctrl+shift+f",
     "command": "-workbench.view.search",
     "when": "workbench.view.search.active"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "-vue3snippets.format",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'vue'"
+  },
+  {
+    "key": "alt+oem_2",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+oem_1",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+space",
+    "command": "-editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  {
+    "key": "alt+g",
+    "command": "merge-conflict.previous"
+  },
+  {
+    "key": "alt+h",
+    "command": "merge-conflict.next"
+  },
+  {
+    "key": "alt+h",
+    "command": "-git.viewFileHistory"
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "-code-runner.stop"
   }
 ]
