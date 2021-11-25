@@ -1,0 +1,175 @@
+{
+	// Place your snippets for vue-html here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	":class": {
+		"prefix": ":class",
+		"body": [
+			":class=\"{ ${1:calssName}: ${2:Boolean}}\""
+		],
+		"description": ":class"
+	},
+	"NODE_ENV DEVELOPMENT": {
+		"prefix": "envD",
+		"body": [
+			"process.env.NODE_ENV === 'development'",
+		],
+		"description": "development env"
+	},
+	"NODE_ENV PRODUCTION": {
+		"prefix": "envP",
+		"body": [
+			"process.env.NODE_ENV === 'production'",
+		],
+		"description": "production env"
+	},
+	"valform": {
+		"prefix": "valform",
+		"body": [
+			"this.refs.$1.validate(v => {",
+			"  if (!v) {",
+			"    return",
+			"  }",
+			"  $2",
+			"})"
+		],
+		"description": "element form validate"
+	},
+	"vxe-grid": {
+		"prefix": "egrid",
+		"body": [
+			"<el-main",
+			"  height=\"\"",
+			"  style=\"height: calc(100% - 102px); padding: 0px 20px\"",
+			">",
+			"  <!-- Main content -->",
+			"  <vxe-grid",
+			"    ref=\"xGrid\"",
+			"    border",
+			"    resizable",
+			"    height=\"auto\"",
+			"    align=\"center\"",
+			"    :loading=\"loading\"",
+			"    :data=\"tableData\"",
+			"    :columns=\"tableColumn\"",
+			"    :sort-config=\"{",
+			"      trigger: 'cell',",
+			"      defaultSort: { field: 'age', order: 'desc' },",
+			"      orders: ['desc', 'asc', null],",
+			"    }\"",
+			"    @sort-change=\"sortChangeEvent\"",
+			"  >",
+			"    <template v-slot:operate=\"{ row }\">",
+			"        <el-popconfirm",
+			"        :title=\"`确定删除用户【${row.user_name}】吗？`\"",
+			"        @onConfirm=\"delUser(row)\"",
+			"      >",
+			"        <vxe-button",
+			"          title=\"删除\"",
+			"          circle",
+			"          type=\"danger\"",
+			"          icon=\"el-icon-delete\"",
+			"          slot=\"reference\"",
+			"        ></vxe-button>",
+			"      </el-popconfirm>",
+			"    </template>",
+			"  </vxe-grid>",
+			"</el-main>",
+			"<el-footer height=\"48px\">",
+			"  <!-- Footer content -->",
+			"  <vxe-pager",
+			"    :current-page=\"tablePage.currentPage\"",
+			"    :page-size=\"tablePage.pageSize\"",
+			"    :total=\"tablePage.totalResult\"",
+			"    :layouts=\"[",
+			"      'PrevPage',",
+			"      'JumpNumber',",
+			"      'NextPage',",
+			"      'FullJump',",
+			"      'Sizes',",
+			"      'Total',",
+			"    ]\"",
+			"    @page-change=\"handlePageChange\"",
+			"  />",
+			"</el-footer>",
+		],
+		"description": "生成表格 vxe-grid"
+	},
+	"el-container": {
+		"prefix": "elc",
+		"body": [
+			"   <el-container direction=\"vertical\" style=\"height: calc(100vh - 50px)\">",
+			"     <el-header height=\"54px\">",
+			"       <!-- Header area -->$1",
+			"     </el-header>",
+			"     <el-container direction=\"horizontal\">",
+			"       <el-aside width=\"200px\">",
+			"         <!-- Aside area -->",
+			"       </el-aside>",
+			"       <el-container direction=\"vertical\">",
+			"         <el-main height=\"\">",
+			"           <!-- Main area -->$2",
+			"         </el-main>",
+			"         <el-footer height=\"\">",
+			"           <!-- Footer area -->$3",
+			"         </el-footer>",
+			"       </el-container>",
+			"     </el-container>",
+			"   </el-container>",
+		],
+		"description": "容器布局 container aside footer"
+	},
+	"el-head": {
+		"prefix": "elh",
+		"body": [
+			"  <el-header height=\"54px\">",
+			"    <el-row :gutter=\"20\" type=\"flex\" justify=\"space-between\">",
+			"      <el-col :span=\"12\" :offset=\"0\">",
+			"        <el-row type=\"flex\" justify=\"start\">",
+			"          <el-input v-model=\"\" size=\"medium\" placeholder=\"请输入账号\">",
+			"          <el-button slot=\"append\" icon=\"el-icon-search\" @click=\"\"/></el-input>$1",
+			"        </el-row>",
+			"      </el-col>",
+			"      <el-col :span=\"12\" :offset=\"0\">",
+			"        <el-row type=\"flex\" justify=\"end\">",
+			"          <el-button size=\"medium\" type=\"primary\" @click=\"\">新增用户</el-button>",
+			"        </el-row>",
+			"      </el-col>",
+			"    </el-row>",
+			"  </el-header>",
+		],
+		"description": "容器布局 container aside footer"
+	},
+	"scss": {
+		"prefix": "scss",
+		"body": [
+			"<style lang=\"scss\" scoped>",
+			"   $1",
+			"</style>"
+		]
+	},
+	"computer": {
+		"prefix": "cmp",
+		"body": [
+			"computed: {",
+			"  $1: {",
+			"       get: function () {",
+			"         return this.$2",
+			"       },",
+			"       set: function (v) {",
+			"         this.$3 = v",
+			"       }",
+			"    }",
+			"},",
+		]
+	},
+	"CMF": {
+		"prefix": "CMF",
+		"body": [
+			"// FUNCTION: $1"
+		],
+		"description": "方法标识 注释高亮"
+	}
+}
